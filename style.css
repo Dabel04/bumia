@@ -1,0 +1,242 @@
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  /* --- LEFT PANEL (FORM) --- */
+  .left-panel {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .left-panel h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .google-btn:hover {
+    background: #f5f5f5;
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 2rem 0;
+    color: #999;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .divider::before { margin-right: 1rem; }
+  .divider::after { margin-left: 1rem; }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    transition: border 0.2s, background-color 0.2s;
+  }
+
+  /* Simulating the "filled/focused" state from the mockup */
+  .form-group input.filled {
+    background-color: #eaf0fb;
+    border-color: #d0e0f5;
+  }
+
+  .form-group input:focus {
+    border-color: #1a1a1a;
+  }
+
+  .eye-icon {
+    position: absolute;
+    right: 1rem;
+    top: 2.3rem;
+    cursor: pointer;
+    color: #999;
+  }
+
+  .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .checkbox-group input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  .checkbox-group label {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666;
+    text-transform: none;
+    letter-spacing: normal;
+    cursor: pointer;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .submit-btn:hover {
+    background: #222;
+  }
+
+  /* --- RIGHT PANEL (IMAGE) --- */
+  .right-panel {
+    flex: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%), 
+                url('women.jpg') center/cover;
+    border-radius: 20px;
+    margin: 1rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+    position: relative;
+  }
+
+  .badges {
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .promo-text h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+  }
+
+  .promo-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #e0e0e0;
+    max-width: 90%;
+  }
+
+  /* --- RESPONSIVE WEAKNESS CHECK --- */
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+    }
+    .right-panel {
+      min-height: 500px;
+      margin: 0;
+      border-radius: 0 0 20px 20px;
+    }
+    .badges {
+      top: 3rem;
+    }
+  }
