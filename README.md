@@ -1,0 +1,1 @@
+https://bumiaregister.netlify.app/

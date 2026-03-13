@@ -24,23 +24,33 @@
     <form id="regForm">
       <div class="form-group">
         <label>FULL NAME</label>
-        <input type="text" id="regFullname" placeholder="Enter your name">
+        <input type="text" id="regFullname" placeholder="Enter your full name">
+        <span id="fullnameError" class="error-text"></span>
       </div>
 
       <div class="form-group">
         <label>EMAIL ADDRESS</label>
-        <input type="email" class="filled" id="regEmail" value="admin@4411.com" readonly>
+        <input type="email" id="regEmail" placeholder="Enter your email">
+        <span id="emailError" class="error-text"></span>
       </div>
 
       <div class="form-group">
         <label>PHONE NUMBER</label>
-        <input type="text" class="filled" id="regPhoneNumber" value="081245525" readonly>
+        <input type="text" id="regPhoneNumber" placeholder="Enter your phone number">
+        <span id="phoneNumberError" class="error-text"></span>
+      </div>
+
+      <div class="form-group">
+        <label>BUSINESS NAME</label>
+        <input type="text" id="regBusinessName" placeholder="Enter your business name">
+        <span id="businessNameError" class="error-text"></span>
       </div>
 
       <div class="form-group">
         <label>PASSWORD</label>
-        <input type="password" id="regPassword" class="filled" value="........" readonly>
+        <input type="password" id="regPassword" placeholder="Create a password">
         <svg class="eye-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"></path></svg>
+        <span id="passwordError" class="error-text"></span>
       </div>
 
       <div class="checkbox-group">
@@ -48,7 +58,9 @@
         <label for="terms">I agree to Terms & Privacy Policy</label>
       </div>
 
-      <input type="submit" class="submit-btn" id="submitButton" value="Register"/>
+      <button type="submit" class="submit-btn" id="registerButton">REGISTER</button>
+      
+      <div id="registerStatus" style="color: #d93025; margin-top: 15px; text-align: center; font-weight: 600; font-size: 0.9rem;"></div>
     </form>
   </div>
 
