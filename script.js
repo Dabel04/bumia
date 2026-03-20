@@ -102,7 +102,7 @@ formElem.addEventListener("submit", async function (e) {
     }
 
     // Redirecting to login page after successful registration
-    window.location.href = "login.html";
+    window.location.href = "my-product.html";
   } catch (error) {
     registerStatusElem.textContent = error.message;
   }
